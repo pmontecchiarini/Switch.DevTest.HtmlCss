@@ -16,7 +16,7 @@ The objective is to deliver a faithful implementation of provided design and pro
 2. Clone the repository (if you're having troubles cloning: [GitHub Docs - Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))
 3. Create a branch from latest master and check out that branch
 4. Go to root folder (../Switch.DevTest.HtmlCss) where you will find all files related to the project
-5. Open a terminal (on that folder) and run `npm start` to start the project
+5. Open a terminal (on that folder) and run `npm start` to start the project (each time you save a scss file, a process will convert that to css and override it inside the css folder. That means that you should wait a couple of seconds before you can see your changes reflected on the screen)
 6. Open the index.html file with a browser
 7. Once you made and pushed all required changes you can ask for a pull request from your branch to submit your test. (if you're having troubles creating a PR: [GitHub Docs - Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request))
 
@@ -37,7 +37,7 @@ Notes:
 ## Design
 
 ### Prototype
-- [Figma Prototype](https://www.figma.com/proto/aDABvG54KWPH8kq3ZRmYEw/Meteor-App?page-id=0%3A1&node-id=1%3A6802&viewport=-2286%2C-637%2C1.74&scaling=min-zoom&starting-point-node-id=1%3A1720)
+- [Figma Prototype](https://www.figma.com/proto/aDABvG54KWPH8kq3ZRmYEw/Meteor-App?page-id=0%3A1&node-id=1%3A1720&viewport=-2286%2C-637%2C1.74&scaling=min-zoom&starting-point-node-id=1%3A1720)
 - You should use provided prototype below to see the entire flow
 - While looking at the prototype
 	- Click on the screen to highlight the interactions

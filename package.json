@@ -1,0 +1,31 @@
+{
+  "name": "switch.devtest.htmlcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && concurrently --kill-others \"node fileFetcher.js\" \"npm run watch-css\"",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Switch-Software-Solutions/Switch.DevTest.HtmlCss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Switch-Software-Solutions/Switch.DevTest.HtmlCss/issues"
+  },
+  "homepage": "https://github.com/Switch-Software-Solutions/Switch.DevTest.HtmlCss#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
