@@ -1,0 +1,35 @@
+// Colors
+$white: #fff;
+$gray-100: #fafafa;
+$gray-300: #ccc;
+$gray-900: #565656;
+$primary-100: #ffe8e5;
+$primary-300: #ffc4bd;
+$primary-500: #f1b9b2;
+$primary-900: #ed6a5a;
+$yellow: #fddc0b;
+
+// Spacing
+$base-padding: 0.625rem;
+$base-margin: 0.625rem;
+
+
+// Borders
+$base-border-thickness: 1px;
+$base-border-radius: 5px;
+$base-border-style: solid;
+
+// Font weight
+$font-weight-regular: 400;
+$font-weight-thin: 300;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 600;
+
+//Font Sizes
+$base-font-size: 0.688rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-l: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+
+//Font family
+$font-base: 'IBM Plex Sans', sans-serif;

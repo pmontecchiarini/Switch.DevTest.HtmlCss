@@ -1,0 +1,61 @@
+@mixin button($text-color, $bg-color, $border-color) {
+    color: $text-color;
+    background-color: $bg-color;
+    border-color: $border-color;
+    border-style: $base-border-style;
+    border-width: $base-border-thickness;
+    border-radius: $base-border-radius;
+    text-transform: uppercase;
+    font-family: $font-base;
+    letter-spacing: 1px;
+    font-weight: $font-weight-semi-bold + 100;
+    font-size: $base-font-size;
+    cursor: pointer;
+    padding: 3px 7px;
+}
+
+.btn-primary {
+    @include button($white, $primary-900, $primary-900);
+
+    &:hover {
+        color: $primary-900;
+        background-color: lighten($primary-900, 30);
+    }
+}
+
+.btn-secondary {
+    @include button($primary-900, $white, $primary-900);
+
+    &:hover {
+        background-color: lighten($primary-900, 30);
+    }
+}
+
+.btn-animated {
+    @include button($yellow, $primary-900, $primary-900);
+}
+
+//BUTTON ICON
+.btn-icon {
+    border: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        color: $primary-900;
+
+    }
+
+    &:hover {
+        background-color: lighten($primary-900, 30);
+    }
+
+    &:active {
+        background-color: lighten($primary-900, 15);
+    }
+}

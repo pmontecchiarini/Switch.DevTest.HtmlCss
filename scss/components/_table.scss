@@ -1,0 +1,116 @@
+@mixin custom-scrollbar($size: 8px, $bg-color: #eee, $thumb-color: #999) {
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+
+        &-track,
+        &-thumb {
+            border-radius: 10px;
+        }
+
+        &-track {
+            background-color: $bg-color;
+        }
+
+        &-thumb {
+            background-color: $thumb-color;
+        }
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+$table-min-width: 1200px;
+$fixed-table-width: 150px;
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: $table-min-width;
+    max-height: 90vh;
+    display: flex;
+    border: $base-border-style $base-border-thickness $gray-300;
+    border-radius: $base-border-radius;
+    margin: auto;
+    overflow-x: auto;
+    @include custom-scrollbar();
+
+
+
+    table {
+        white-space: pre;
+        text-align: right;
+        border-collapse: collapse;
+        color: $gray-900;
+
+
+        thead {
+            background-color: $gray-100;
+
+            th::after:not(:last-child) {
+                content: "|";
+                float: right;
+                color: $gray-300;
+                padding-left: $base-padding;
+
+
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: $primary-100;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    background-color: $primary-300;
+                }
+
+                td:first-child {
+                    text-align: left;
+                }
+
+                td {
+                    padding-right: $base-padding * 2;
+                }
+
+                +tr {
+                    border-top: 1px solid $gray-100;
+                    color: $gray-900;
+
+                }
+            }
+        }
+
+        th,
+        td {
+            padding: $base-padding;
+        }
+
+        &:first-child {
+            min-width: $table-min-width;
+        }
+
+        &:last-child {
+            position: sticky;
+            right: 0;
+            width: $fixed-table-width;
+            margin-left: auto;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(#000, 0.1);
+            z-index: 1;
+        }
+    }
+}
